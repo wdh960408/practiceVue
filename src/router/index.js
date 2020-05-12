@@ -36,6 +36,11 @@ export default new Router({
           path: "/wdh/list",
           name: "第一个页面",
           component: FirstPage
+        },
+        {
+          path: "/wdh/frist",
+          name: "第一个页面",
+          component: HelloWorld
         }
       ],
     }

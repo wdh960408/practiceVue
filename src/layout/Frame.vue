@@ -8,8 +8,8 @@
           </template>
           <el-menu-item-group>
             <template slot="title">分组一</template>
-            <el-menu-item index="1-1">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
+            <el-menu-item index="1-1" ><router-link :to="{path:'/wdh/list'}"><el-button type="primary">选项1</el-button></router-link></el-menu-item>
+            <el-menu-item index="1-2" @click="onPush">选项2</el-menu-item>
           </el-menu-item-group>
           <el-menu-item-group title="分组2">
             <el-menu-item index="1-3">选项3</el-menu-item>
@@ -91,6 +91,11 @@ export default {
     return {
       tableData: Array(20).fill(item)
     };
+  },
+  methods:{
+    onPush(){
+      this.$router.push({path:'/wdh/frist'})
+    }
   }
 };
 </script>
